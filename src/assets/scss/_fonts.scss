@@ -1,0 +1,39 @@
+@font-face {
+  font-family: 'Futura PT';
+  src: url('~/assets/fonts/FuturaPT-BookObl.eot');
+  src: url('~/assets/fonts/FuturaPT-BookObl.eot?#iefix') format('embedded-opentype'),
+  url('~/assets/fonts/FuturaPT-BookObl.woff') format('woff'),
+  url('~/assets/fonts/FuturaPT-BookObl.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Futura PT';
+  src: url('~/assets/fonts/FuturaPT-Medium.eot');
+  src: url('~/assets/fonts/FuturaPT-Medium.eot?#iefix') format('embedded-opentype'),
+  url('~/assets/fonts/FuturaPT-Medium.woff') format('woff'),
+  url('~/assets/fonts/FuturaPT-Medium.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futura PT';
+  src: url('~/assets/fonts/FuturaPT-Book.eot');
+  src: url('~/assets/fonts/FuturaPT-Book.eot?#iefix') format('embedded-opentype'),
+  url('~/assets/fonts/FuturaPT-Book.woff') format('woff'),
+  url('~/assets/fonts/FuturaPT-Book.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futura PT';
+  src: url('~/assets/fonts/FuturaPT-Bold.eot');
+  src: url('~/assets/fonts/FuturaPT-Bold.eot?#iefix') format('embedded-opentype'),
+  url('~/assets/fonts/FuturaPT-Bold.woff') format('woff'),
+  url('~/assets/fonts/FuturaPT-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}

@@ -1,0 +1,21 @@
+@import "fonts";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Futura PT', sans-serif;
+}
+
+.is-nav-open {
+  overflow: hidden;
+}
+
+.v-messages__message {
+  color: red;
+}
