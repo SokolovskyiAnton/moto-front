@@ -2,18 +2,15 @@
   <footer class="h-auto bg-[#404040]">
     <v-container>
       <v-row>
-        <v-col :cols="isMobile.mobile.value ? 12 : 6">
+        <v-col :cols="isMobile.sm ? 12 : 6">
           <div class="mt-7 mb-7">
-            <img src="/img-removebg-preview.png" alt='img' :width='isMobile ? 250 : 360' :height='isMobile ? 50 : 96'>
+            <img src="/img-removebg-preview.png" alt='img' :width='isMobile.sm ? 250 : 360' :height='isMobile.sm ? 50 : 96'>
           </div>
           <div class="text-white mb-2 text-sm">Sign up for exclusive product information, newsletters & special discount offers!</div>
           <div class="flex">
             <input v-model="email"  class="bg-white pa-4 w-full outline-0 rounded-sm" placeholder="Email" />
             <button class="text-sm bg-red-600 ml-5 pa-2 rounded-xl w-56 uppercase text-white font-bold">Subscribe</button>
           </div>
-        </v-col>
-        <v-col :cols="isMobile.mobile.value ? 12 : 6">
-
         </v-col>
       </v-row>
       <v-divider class="mt-10 mb-5"></v-divider>

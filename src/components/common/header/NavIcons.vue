@@ -27,7 +27,7 @@
         </button>
       </li>
     </ul>
-    <MobileMenu v-if="isOpen" />
+    <MobileMenu v-if="isOpen" @close="handleClose" />
   </div>
 </template>
 
@@ -35,10 +35,16 @@
 import MobileMenu from '~/components/common/header/MobileMenu.vue';
 import { useCartStore } from '~/stores/cart-store';
 
+defineEmits(['close'])
+
 const isOpen = ref(false)
 const store = useCartStore();
 
 const items = computed(() => store.getCartItems)
+
+function handleClose() {
+  isOpen.value = false;
+}
 </script>
 
 <style lang="scss" scoped>

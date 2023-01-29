@@ -1,7 +1,7 @@
 <template>
   <div class="mb-8 mt-8">
     <v-row>
-      <v-col v-for="category in categories" :key="category.id" :cols="isMobile.mobile.value ? 12 : 4">
+      <v-col @click="handleClose" v-for="category in categories" :key="category.id" :cols="isMobile.mobile.value ? 12 : 4">
         <div class="text-xl text-black font-bold">
           {{ category.title }}
         </div>
@@ -21,14 +21,19 @@
 </template>
 
 <script lang="ts" setup>
-
 import { useCategoryStore } from '~/stores/category-store';
 import { CategoryDto } from '~/stores/dto/category.dto';
 import { useDisplay } from 'vuetify';
 
+const emit = defineEmits(['childClose'])
+
 const store = useCategoryStore();
 const isMobile = useDisplay()
 const categories = computed(() => store.getCategories);
+
+function handleClose() {
+  emit('childClose')
+}
 </script>
 
 <style lang="scss" scoped>

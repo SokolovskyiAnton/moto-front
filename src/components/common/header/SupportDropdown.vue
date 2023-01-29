@@ -7,17 +7,17 @@
         </div>
 
         <div class="pl-2 mt-4 cursor-pointer">
-          <router-link to="/contact-us">
+          <router-link @click="handleClose" to="/contact-us">
             Contact us
           </router-link>
         </div>
         <div class="pl-2 mt-4 cursor-pointer">
-          <router-link to="/warranty">
+          <router-link @click="handleClose" to="/warranty">
             Warranty
           </router-link>
         </div>
         <div class="pl-2 mt-4 cursor-pointer">
-          <router-link to="/shipping-and-returns">
+          <router-link @click="handleClose" to="/shipping-and-returns">
             Shipping & Returns
           </router-link>
         </div>
@@ -56,7 +56,13 @@
 <script setup lang="ts">
 import { useDisplay } from 'vuetify';
 
+const emit = defineEmits(['childClose'])
+
 const isMobile = useDisplay();
+
+function handleClose() {
+  emit('childClose')
+}
 </script>
 
 <style lang="scss" scoped>

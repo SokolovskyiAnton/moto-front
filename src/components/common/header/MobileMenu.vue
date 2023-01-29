@@ -3,12 +3,12 @@
     <v-expansion-panels v-model="panel">
       <v-expansion-panel title="E-Bikes" >
         <v-expansion-panel-text>
-          <BikesDropdown />
+          <BikesDropdown @child-close="handleClose" />
         </v-expansion-panel-text>
       </v-expansion-panel>
       <v-expansion-panel title="Support">
         <v-expansion-panel-text>
-          <SupportDropdown />
+          <SupportDropdown @child-close="handleClose" />
         </v-expansion-panel-text>
       </v-expansion-panel>
     </v-expansion-panels>
@@ -25,9 +25,15 @@ import SupportDropdown from '~/components/common/header/SupportDropdown.vue';
 import { useRouter } from 'vue-router';
 
 const router = useRouter();
+const emit = defineEmits(['close', 'childClose'])
 const panel = ref(0)
 function handleClick() {
+  emit('close')
   router.push({ name: 'about' })
+}
+
+function handleClose() {
+  emit('close')
 }
 </script>
 
