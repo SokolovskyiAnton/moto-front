@@ -2,4 +2,4 @@ import { ApiService } from '~/services/ApiService';
 
 
 
-export const api = new ApiService({ baseURL: 'http://localhost:8000/api', credentials: "include"})
+export const api = new ApiService({ baseURL: 'https://nest-moto-backend.herokuapp.com/api/', credentials: "include"})
