@@ -11,7 +11,6 @@
 </template>
 
 <script setup lang="ts">
-
 import DesktopMenu from '~/components/common/header/DesktopMenu.vue';
 import NavIcons from '~/components/common/header/NavIcons.vue';
 </script>

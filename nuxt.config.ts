@@ -13,7 +13,6 @@ export default defineNuxtConfig({
     css: [
         '~/assets/scss/main.scss',
         'vuetify/lib/styles/main.sass',
-
     ],
 
     build: {
@@ -29,7 +28,7 @@ export default defineNuxtConfig({
                 // automatically imports `defineStore` as `definePiniaStore`
                 ['defineStore', 'definePiniaStore'] // import { defineStore as definePiniaStore } from 'pinia'
             ]
-        }],
+        }]
     ],
     postcss: {
         plugins: {

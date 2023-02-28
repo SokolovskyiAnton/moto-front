@@ -29,7 +29,7 @@ const emit = defineEmits(['close', 'childClose'])
 const panel = ref(0)
 function handleClick() {
   emit('close')
-  router.push({ name: 'about' })
+  router.push('/about-us')
 }
 
 function handleClose() {

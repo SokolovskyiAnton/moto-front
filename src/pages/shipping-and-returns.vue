@@ -68,7 +68,7 @@
     </ul>
 
     <h4 class="text-2xl mt-3 font-semibold">Returns of Defective Equipment </h4>
-    <ul class="list-disc ml-5 mt-2">
+    <ul class="list-disc ml-5 mt-2 mb-8">
       <li>Defective equipment is covered by our warranty policy.</li>
       <li>Contact Lithium Customs Support to begin the warranty claims process.  Be sure to follow all Warranty Procedures and directions provided by a Lithium Customs Support Representative.</li>
     </ul>

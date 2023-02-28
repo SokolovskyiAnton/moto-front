@@ -21,6 +21,11 @@
             Shipping & Returns
           </router-link>
         </div>
+        <div class="pl-2 mt-4 cursor-pointer">
+          <router-link @click="handleClose" to="/refunds">
+            Refunds
+          </router-link>
+        </div>
       </v-col>
       <v-col :cols="isMobile.mobile.value ? 12 : 3">
         <router-link to="/contact-us">
@@ -43,7 +48,7 @@
           <div class="ml-2">
             <div class="font-bold">Ring Us</div>
             <div>
-              <a href='tel:08808080808'>08808080808</a>
+              <a href='tel:3303332824'>3303332824</a>
             </div>
             <div>Monday-Friday 8AM-5PM PT</div>
           </div>

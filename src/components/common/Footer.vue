@@ -9,7 +9,14 @@
           <div class="text-white mb-2 text-sm">Sign up for exclusive product information, newsletters & special discount offers!</div>
           <div class="flex">
             <input v-model="email"  class="bg-white pa-4 w-full outline-0 rounded-sm" placeholder="Email" />
-            <button class="text-sm bg-red-600 ml-5 pa-2 rounded-xl w-56 uppercase text-white font-bold">Subscribe</button>
+            <v-btn
+              class="text-sm ml-5 pa-2 rounded-xl w-56 h-auto uppercase text-white font-bold"
+              @click='handleClick'
+              :loading='isLoading'
+              color='red'
+            >
+              Subscribe
+            </v-btn>
           </div>
         </v-col>
       </v-row>
@@ -22,6 +29,9 @@
         </li>
       </ul>
     </v-container>
+    <v-snackbar v-model="show" location='top right' color='green'>
+      Thank you for subscribe!
+    </v-snackbar>
   </footer>
 </template>
 
@@ -29,6 +39,8 @@
 import { useDisplay } from 'vuetify';
 
 const email = ref('')
+const isLoading = ref(false)
+const show = ref(false)
 const isMobile = useDisplay()
 
 const list = [
@@ -49,6 +61,18 @@ const list = [
     link: ''
   }
 ]
+
+function handleClick() {
+  if (!email.value) return;
+
+  isLoading.value = true
+
+  setTimeout(() => {
+    isLoading.value = false
+    email.value = ''
+    show.value = true
+  }, 1500)
+}
 </script>
 
 <style scoped>
