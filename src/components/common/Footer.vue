@@ -3,14 +3,15 @@
     <v-container>
       <v-row>
         <v-col :cols="isMobile.sm ? 12 : 6">
-          <div class="mt-7 mb-7">
-            <img src="/img-removebg-preview.png" alt='img' :width='isMobile.sm ? 250 : 360' :height='isMobile.sm ? 50 : 96'>
+          <div class="flex flex-col align-center justify-center mt-7 mb-7">
+            <img src="/logo.png" alt='img' :width='85' :height='75'>
+            <span class='font-bold text-white text-2xl mt-2'>Lithium Customs</span>
           </div>
           <div class="text-white mb-2 text-sm">Sign up for exclusive product information, newsletters & special discount offers!</div>
           <div class="flex">
             <input v-model="email"  class="bg-white pa-4 w-full outline-0 rounded-sm" placeholder="Email" />
             <v-btn
-              class="text-sm ml-5 pa-2 rounded-xl w-56 h-auto uppercase text-white font-bold"
+              class="text-sm ml-5 pa-2 rounded-xl w-24 h-auto uppercase text-white font-bold"
               @click='handleClick'
               :loading='isLoading'
               color='red'

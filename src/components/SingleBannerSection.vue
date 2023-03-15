@@ -14,7 +14,7 @@ import { useRouter } from 'vue-router';
 
 const router = useRouter()
 function handleClick() {
-  router.push({ name: 'collection' })
+  router.push('/collections/bikes')
 }
 </script>
 

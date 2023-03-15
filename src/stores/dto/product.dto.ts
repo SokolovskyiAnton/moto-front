@@ -10,6 +10,8 @@ export interface ProductDto {
   optionsTitle: string;
   options: string[];
   price: number,
+  battery: string;
+  motor: string;
   oldPrice: number,
   isAvailable: boolean,
   weight?: number;

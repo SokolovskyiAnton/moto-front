@@ -2,7 +2,7 @@
   <header class="header">
     <div class="header-logo">
       <router-link to="/">
-        <img src="/img.png" alt="logo">
+        <img src="/logo.png" alt="logo">
       </router-link>
     </div>
     <DesktopMenu />
@@ -33,12 +33,8 @@ import NavIcons from '~/components/common/header/NavIcons.vue';
     align-items: center;
     height: 100%;
     img {
-      width: 210px;
-      height: 56px;
-      @media (max-width: 600px) {
-        width: 136px;
-        height: 36px;
-      }
+      width: 85px;
+      height: 75px;
     }
   }
 }

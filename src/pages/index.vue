@@ -1,5 +1,6 @@
 <template>
   <div class="bg-black">
+    <HomeVideoSection src='https://moto-backend-nest-js.s3.amazonaws.com/video_2023-03-15_14-27-06.mp4' :is-button='true' />
     <BannerSection />
     <PerformanceSection />
     <AboutUsBannerSection />

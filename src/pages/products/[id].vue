@@ -32,7 +32,7 @@
           <div class="mt-2">
             Color: <span class="font-semibold"> {{ product.color }} </span>
           </div>
-          <div class="mt-4">
+          <div v-if='product.optionsTitle' class="mt-4">
             <v-row>
               <v-col cols="3" align-self='center'>
                 <span class="font-semibold mr-2">
@@ -104,9 +104,27 @@
       <hr>
 
       <div class="mt-5">
-        <p>
+        <p class='text-xl'>
           {{ product.description }}
         </p>
+      </div>
+      <div class='mt-10'>
+        <HomeVideoSection src='https://moto-backend-nest-js.s3.amazonaws.com/video_2023-03-15_14-27-12.mp4'  :is-button='false'/>
+      </div>
+      <div class='mt-10'>
+        <div class='font-bold text-5xl'>Key Features</div>
+        <ul v-if='product.speed' class="flex flex-wrap justify-center mt-5">
+          <li
+            class="list-none ma-5 flex flex-col"
+            v-for="item in list"
+            :key="item.icon"
+          >
+            <div class="text-center">
+              <v-icon size="56" :icon="`mdi-${item.icon}`"></v-icon>
+            </div>
+            <span class="text-center">{{ item.title }}</span>
+          </li>
+        </ul>
       </div>
     </div>
   </PageWrapper>
@@ -123,7 +141,6 @@ import { useCartStore } from '~/stores/cart-store';
 import { useVuelidate } from '@vuelidate/core';
 import { required } from '@vuelidate/validators';
 
-
 const productStore = useProductStore();
 const cartStore = useCartStore();
 const route = useRoute();
@@ -134,18 +151,45 @@ const form = reactive({
   quantity: 1
 })
 
+const product = computed(() => productStore.getProduct)
+
+const list = computed(() => {
+  return [
+    {
+      title: product.value?.battery,
+      icon: 'lightning-bolt'
+    },
+    {
+      title: product.value?.motor,
+      icon: 'engine'
+    },
+    {
+      title: `${product.value?.mileRange} Mile Range`,
+      icon: 'ray-start-end'
+    },
+    {
+      title: `${product.value?.speed} MPH`,
+      icon: 'speedometer'
+    },
+    {
+      title: `${product.value?.weight} lbs`,
+      icon: 'weight'
+    }
+  ]
+})
+
 const rules = computed(() => {
-  return {
+  return product.value?.optionsTitle ?  {
     option: {
       required,
     },
-  };
+  } : {};
 });
 const v$ = useVuelidate(rules.value, form);
 
-const product = computed(() => productStore.getProduct)
 
 function addItem() {
+  console.log(v$.value.$invalid);
   if (v$.value.$invalid) {
     v$.value.$touch()
     return

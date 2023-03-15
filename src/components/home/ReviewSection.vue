@@ -1,7 +1,7 @@
 <template>
   <section class="h-auto bg-[#282828]">
     <v-container class="fill-height">
-      <v-carousel height="100%" show-arrows="hover" hide-delimiter-background hide-delimiters cycle>
+      <v-carousel height="100%" show-arrows="hover" hide-delimiter-background hide-delimiters>
         <v-carousel-item
           v-for="(item,i) in list"
           :key="i"
