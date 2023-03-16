@@ -5,6 +5,7 @@
     <PerformanceSection />
     <AboutUsBannerSection />
     <ReviewSection />
+    <FinancingOptionsSection />
     <SingleBannerSection />
   </div>
 </template>
@@ -16,6 +17,7 @@ import AboutUsBannerSection from '~/components/home/AboutUsBannerSection.vue';
 import ReviewSection from '~/components/home/ReviewSection.vue';
 import { useProductStore } from '~/stores/product-store';
 import { useCategoryStore } from '~/stores/category-store';
+import FinancingOptionsSection from '~/components/home/FinancingOptionsSection.vue';
 
 useHead({
   title: 'Lithium Customs LLC | Best E-Bikes',

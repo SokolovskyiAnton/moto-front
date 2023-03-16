@@ -24,7 +24,7 @@
       <v-divider class="mt-10 mb-5"></v-divider>
       <ul class="flex">
         <li v-for="item in list" :key="item.icon" class="ml-4 list-none">
-          <a :href="item.link">
+          <a :href="item.link" target='_blank'>
             <v-icon :icon="`mdi-${item.icon}`" color="white" size="36" />
           </a>
         </li>
@@ -47,19 +47,15 @@ const isMobile = useDisplay()
 const list = [
   {
     icon: 'youtube',
-    link: ''
+    link: 'https://www.youtube.com/@lithiumcustoms'
   },
   {
     icon: 'instagram',
-    link: ''
+    link: 'https://www.instagram.com/lithium_customs/?igshid=ZDdkNTZiNTM%3D'
   },
   {
     icon: 'facebook',
-    link: ''
-  },
-  {
-    icon: 'twitter',
-    link: ''
+    link: 'https://www.facebook.com/profile.php?id=100088951431842'
   }
 ]
 

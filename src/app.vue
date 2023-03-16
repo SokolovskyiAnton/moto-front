@@ -14,7 +14,6 @@
 </template>
 
 <script setup lang="ts">
-
 const lang = 'en'
 
 </script>

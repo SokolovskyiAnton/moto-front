@@ -9,22 +9,18 @@
       width='100%'
       :src='src'
     ></video>
-    <div class='video-shape flex align-center max-sm:flex-col max-md:flex justify-between'>
-      <div class='text-white font-bold'>
-        <v-timeline side='end'>
-          <v-timeline-item dot-color='white' fill-dot>30 MPH+</v-timeline-item>
-          <v-timeline-item dot-color='white' fill-dot>50+ Mile Range</v-timeline-item>
-          <v-timeline-item dot-color='white' fill-dot>48V Battery</v-timeline-item>
-        </v-timeline>
-      </div>
-      <div v-if='isButton' class='flex align-center flex-column'>
-        <h4>Some text</h4>
+    <div class='video-shape flex align-center max-sm:flex-col-reverse max-md:flex justify-between'>
+      <div v-if='isButton' >
+        <h4 class='text-left text-5xl font-bold'>Volt Rider - CT</h4>
+        <h5 class='text-left text-2xl mt-3'>The electric motorbike for those who want to beat traffic in style</h5>
         <v-btn
-          class="text-sm mt-5 pa-2 rounded-xl w-56 h-auto uppercase text-white font-bold"
+          class="mt-5 rounded-md"
           variant='outlined'
           color='white'
+          width='200'
+          to='/products/3'
         >
-          Buy now
+          Order Now
         </v-btn>
       </div>
     </div>
@@ -62,5 +58,10 @@ defineProps<{
   padding: 20px;
   top: 0;
   left: 0;
+}
+
+.v-btn__content {
+  font-size: 20px;
+  font-weight: bold;
 }
 </style>

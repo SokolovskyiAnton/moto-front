@@ -26,6 +26,11 @@
             Refunds
           </router-link>
         </div>
+        <div class="pl-2 mt-4 cursor-pointer">
+          <router-link @click="handleClose" to="/financing">
+            Financing
+          </router-link>
+        </div>
       </v-col>
       <v-col :cols="isMobile.mobile.value ? 12 : 3">
         <router-link to="/contact-us">
