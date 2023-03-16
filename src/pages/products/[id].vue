@@ -109,7 +109,7 @@
         </p>
       </div>
       <div class='mt-10'>
-        <HomeVideoSection src='https://moto-backend-nest-js.s3.amazonaws.com/video_2023-03-15_14-27-12.mp4'  :is-button='false'/>
+        <HomeVideoSection src='https://video.wixstatic.com/video/101585_f1663ac096f14912941a8625127090fa/1080p/mp4/file.mp4'  :is-button='false'/>
       </div>
       <div class='mt-10'>
         <div class='font-bold text-5xl'>Key Features</div>
